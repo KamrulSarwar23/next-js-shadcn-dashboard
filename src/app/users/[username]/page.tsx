@@ -20,6 +20,8 @@ import { Button } from "@/components/ui/button";
 
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import AppLineChart from "@/components/AppLineChart";
 
 const SingleUserPage = () => {
   return (
@@ -172,9 +174,26 @@ const SingleUserPage = () => {
         {/* Right */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/* User Card Container */}
-          <div className="bg-primary-foreground p-4 rounded-lg"></div>
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://images.pexels.com/photos/1680175/pexels-photo-1680175.jpeg?auto=compress&cs=tinysrgb&w=800" />
+                <AvatarFallback></AvatarFallback>
+              </Avatar>
+              <h1 className="text-lg font-semibold">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates impedit temporibus, totam aliquid rerum modi similique
+              rem sed quis vero amet doloribus odit dolores libero velit,
+              praesentium laborum? Soluta, nemo!
+            </p>
+          </div>
           {/* Chart Container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="text-xl font-semibold mb-4">Users Activity</h1>
+            <AppLineChart />
+          </div>
         </div>
       </div>
     </div>

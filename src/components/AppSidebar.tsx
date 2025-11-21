@@ -4,9 +4,7 @@ import {
   ChevronUp,
   Home,
   Inbox,
-  LogOut,
   Plus,
-  PlusCircle,
   Projector,
   Search,
   Settings,
@@ -51,8 +49,20 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/",
     icon: Home,
+  },
+
+  {
+    title: "User",
+    url: "/users/kamrul",
+    icon: User,
+  },
+
+  {
+    title: "Payments",
+    url: "/payments",
+    icon: User,
   },
   {
     title: "Inbox",
@@ -83,13 +93,8 @@ function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
-              <Link href="/">
-                <Image
-                  src="/next.svg"
-                  alt="NextJS Logo"
-                  width={60}
-                  height={60}
-                />
+              <Link className="text-lg" href="/">
+                ShadCn Dashboard
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
